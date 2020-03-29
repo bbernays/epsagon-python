@@ -202,6 +202,7 @@ def handler(event, context):
 
 You can prevent data from being sent to epsagon by filtering specific keys in initialization.
 ```python
+
 import epsagon
 epsagon.init(
     token='my-secret-token',
@@ -211,9 +212,10 @@ epsagon.init(
 )
 ```
 
-### Allow keys
+### Allowed keys
 You can allow data to be sent to epsagon by filtering specific keys in initialization.
-￿￿Only branches which contains allow keys will be sent.
+Only keys included in this list will be sent to epsagon.
+Good to know - keys_to_ignore is stronger then keys_to_allow if you use both.
 
 ```python
 import epsagon
